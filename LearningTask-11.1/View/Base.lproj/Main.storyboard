@@ -1,24 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2in-iS-AbB">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="80d-PR-CNT">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="2in-iS-AbB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sqm-9z-tUa">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mHW-36-yO7" kind="relationship" relationship="rootViewController" id="Pfp-gs-1yZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NSC-TU-xpa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-366" y="-11"/>
+        </scene>
+        <!--Github Client-->
+        <scene sceneID="oBQ-b2-y1P">
+            <objects>
+                <tableViewController id="mHW-36-yO7" customClass="ReposListViewController" customModule="LearningTask_11_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="ZLV-IQ-ZQD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RepoTableViewCell" id="hKh-kv-1vM" customClass="RepoTableViewCell" customModule="LearningTask_11_1" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="141"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hKh-kv-1vM" id="Bz6-tC-kfu">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="141"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="t5f-8M-th5" userLabel="Content Container Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="141"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mSy-tx-BDH" userLabel="Titles Stack View">
+                                                    <rect key="frame" x="20" y="20" width="353" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" text="repository-name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zd2-mV-TSa" userLabel="Title Label">
+                                                            <rect key="frame" x="0.0" y="0.0" width="276" height="24"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                            <color key="textColor" name="Mariner"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHW-qF-S4Y" customClass="VisibilityTag" customModule="LearningTask_11_1" customModuleProvider="target">
+                                                            <rect key="frame" x="281" y="0.0" width="72" height="24"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="Public"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EHr-6g-cCt" userLabel="Description Stack View">
+                                                    <rect key="frame" x="20" y="56" width="353" height="33"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="A repository to develop the most incredible ios app in the whole world" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAa-Sv-NE7" userLabel="Description Label">
+                                                            <rect key="frame" x="0.0" y="0.0" width="353" height="32.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lPh-Ki-eM5" userLabel="Complementary Info Stack View">
+                                                    <rect key="frame" x="20" y="101" width="353" height="20"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcN-kV-Yhx" userLabel="Language Marker View" customClass="LanguageMarker" customModule="LearningTask_11_1" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="51.666666666666664" height="20"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="language" value="Swift"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2k-zU-Ldh" userLabel="Stars Indicator View" customClass="StarsIndicator" customModule="LearningTask_11_1" customModuleProvider="target">
+                                                            <rect key="frame" x="63.666666666666671" y="0.0" width="50" height="20"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="stars" value="0"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Updated on Jan 01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5h-7B-S5x" userLabel="Update Info Label">
+                                                            <rect key="frame" x="125.66666666666664" y="0.0" width="227.33333333333337" height="20"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="20" bottom="20" trailing="20"/>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="t5f-8M-th5" secondAttribute="bottom" id="Jvt-1X-o0K"/>
+                                        <constraint firstAttribute="trailing" secondItem="t5f-8M-th5" secondAttribute="trailing" id="l9O-Uf-CMG"/>
+                                        <constraint firstItem="t5f-8M-th5" firstAttribute="leading" secondItem="Bz6-tC-kfu" secondAttribute="leading" id="uU4-Y0-eVC"/>
+                                        <constraint firstItem="t5f-8M-th5" firstAttribute="top" secondItem="Bz6-tC-kfu" secondAttribute="top" id="y34-7x-RiL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="aAa-Sv-NE7" id="iLw-f7-Xab"/>
+                                    <outlet property="languageMarkerView" destination="jcN-kV-Yhx" id="r3M-Cg-XxE"/>
+                                    <outlet property="starsIndicatorView" destination="N2k-zU-Ldh" id="BSR-Hf-ybE"/>
+                                    <outlet property="titleLabel" destination="Zd2-mV-TSa" id="4r2-d6-sFz"/>
+                                    <outlet property="updateInfoLabel" destination="T5h-7B-S5x" id="1eQ-f6-odW"/>
+                                    <outlet property="visibilityTagView" destination="QHW-qF-S4Y" id="3eD-R2-V2X"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mHW-36-yO7" id="4KO-P0-nqO"/>
+                            <outlet property="delegate" destination="mHW-36-yO7" id="iVM-md-NHU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Github Client" id="CgF-sn-A0G"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSJ-K2-ND3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525.95419847328242" y="115.49295774647888"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="N2k-zU-Ldh">
+            <size key="intrinsicContentSize" width="0.0" height="20"/>
+        </designable>
+        <designable name="QHW-qF-S4Y">
+            <size key="intrinsicContentSize" width="0.0" height="24"/>
+        </designable>
+        <designable name="jcN-kV-Yhx">
+            <size key="intrinsicContentSize" width="0.0" height="16"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Mariner">
+            <color red="0.16470588235294117" green="0.42745098039215684" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
